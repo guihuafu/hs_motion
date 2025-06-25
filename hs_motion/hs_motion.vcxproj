@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6AC713E5-B0C3-4631-ACC3-5398085A0869}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>hs_motion</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Project\HS\V2.0\hs_motion\hs_motion\src\include\automove;D:\Project\HS\V2.0\hs_motion\hs_motion\src\include\manualmove;D:\Project\HS\V2.0\hs_motion\hs_motion\src\include;D:\Project\HS\V2.0\hs_motion\hs_motion\src\planmove\basemove;D:\Project\HS\V2.0\hs_motion\hs_motion\src\planmove\manualmove;D:\Project\HS\V2.0\hs_motion\hs_motion\src\planmove\mathoperation;D:\Project\HS\V2.0\hs_motion\hs_motion\src\planmove\motionpara;D:\Project\HS\V2.0\hs_motion\hs_motion\src\planmove\automove;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\planmove\automove\baseautomove.cpp" />
+    <ClCompile Include="src\planmove\automove\BezierCurve.cpp" />
+    <ClCompile Include="src\planmove\automove\HS_AutoMove.cpp" />
+    <ClCompile Include="src\planmove\automove\HS_Int_Circle.cpp" />
+    <ClCompile Include="src\planmove\automove\HS_Int_Factory.cpp" />
+    <ClCompile Include="src\planmove\automove\HS_Int_Joint.cpp" />
+    <ClCompile Include="src\planmove\automove\HS_Int_Line.cpp" />
+    <ClCompile Include="src\planmove\automove\HS_Int_Move.cpp" />
+    <ClCompile Include="src\planmove\automove\HS_Int_Move_Weave.cpp" />
+    <ClCompile Include="src\planmove\automove\HS_Int_SLine.cpp" />
+    <ClCompile Include="src\planmove\basemove\HS_FilterHandle.cpp" />
+    <ClCompile Include="src\planmove\basemove\HS_SetPosCheck.cpp" />
+    <ClCompile Include="src\planmove\basemove\HS_VelPlan_Para.cpp" />
+    <ClCompile Include="src\planmove\manualmove\basemanualmove.cpp" />
+    <ClCompile Include="src\planmove\manualmove\HS_Int_Manual.cpp" />
+    <ClCompile Include="src\planmove\mathoperation\HS_BasicPara.cpp" />
+    <ClCompile Include="src\planmove\mathoperation\HS_Calibration.cpp" />
+    <ClCompile Include="src\planmove\mathoperation\HS_GroupKin.cpp" />
+    <ClCompile Include="src\planmove\mathoperation\HS_Kinematics.cpp" />
+    <ClCompile Include="src\planmove\mathoperation\HS_Math.cpp" />
+    <ClCompile Include="src\planmove\motionpara\motionpara.cpp" />
+    <ClCompile Include="src\planmove\motionpara\motionparamanager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\include\algoglobalparadef.h" />
+    <ClInclude Include="src\include\automove\automove.h" />
+    <ClInclude Include="src\include\automove\automoveparadef.h" />
+    <ClInclude Include="src\include\automove\baseautomove.h" />
+    <ClInclude Include="src\include\HS3_MotionAlertDef.h" />
+    <ClInclude Include="src\include\manualmove\basemanualmove.h" />
+    <ClInclude Include="src\include\manualmove\manualmove.h" />
+    <ClInclude Include="src\include\manualmove\manualmoveparadef.h" />
+    <ClInclude Include="src\include\motionpara.h" />
+    <ClInclude Include="src\include\motionparamanager.h" />
+    <ClInclude Include="src\planmove\automove\AutoControl.h" />
+    <ClInclude Include="src\planmove\automove\BezierCurve.h" />
+    <ClInclude Include="src\planmove\automove\HS_AutoMove.h" />
+    <ClInclude Include="src\planmove\automove\HS_Int_Circle.h" />
+    <ClInclude Include="src\planmove\automove\HS_Int_Factory.h" />
+    <ClInclude Include="src\planmove\automove\HS_Int_Joint.h" />
+    <ClInclude Include="src\planmove\automove\HS_Int_Line.h" />
+    <ClInclude Include="src\planmove\automove\HS_Int_Move.h" />
+    <ClInclude Include="src\planmove\automove\HS_Int_SLine.h" />
+    <ClInclude Include="src\planmove\basemove\HS_FilterHandle.h" />
+    <ClInclude Include="src\planmove\basemove\HS_SetPosCheck.h" />
+    <ClInclude Include="src\planmove\basemove\HS_VelPlan_Para.h" />
+    <ClInclude Include="src\planmove\manualmove\HS_Int_Manual.h" />
+    <ClInclude Include="src\planmove\mathoperation\HS_BasicPara.h" />
+    <ClInclude Include="src\planmove\mathoperation\HS_Calibration.h" />
+    <ClInclude Include="src\planmove\mathoperation\HS_GroupKin.h" />
+    <ClInclude Include="src\planmove\mathoperation\HS_Kinematics.h" />
+    <ClInclude Include="src\planmove\mathoperation\HS_Math.h" />
+    <ClInclude Include="src\planmove\mathoperation\MathOperation.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
